@@ -1,10 +1,11 @@
 'use strict'
 
 var webpack = require('webpack')
-var failPlugin = require('webpack-fail-plugin')
+var failPlugin = require('webpack-fail-plugin');
+var log = require('fancy-log');
 
 function createTask(webpackConfig) {
-	var gutil = require('gulp-util')
+	var PluginError = require('plugin-error');
 	return function (mode) {
 		var onDev = process.env.NODE_ENV !== 'production'
 		var config = Object.create(webpackConfig)
@@ -25,7 +26,7 @@ function createTask(webpackConfig) {
 		return function (cb) {
 			webpack(config, function(err, stats) {
 
-				if (err) throw new gutil.PluginError('webpack:build', err)
+				if (err) throw new PluginError('webpack:build', err)
 
 				var statsJson = stats.toJson()
 				var needLog = mode === 'watch'
@@ -33,7 +34,7 @@ function createTask(webpackConfig) {
 					|| statsJson.warnings.length
 
 				if (needLog) {
-					gutil.log('[webpack:build]', stats.toString({
+					log('[webpack:build]' + stats.toString({
 						cached: false,
 						cachedAssets: false,
 						colors: true,
