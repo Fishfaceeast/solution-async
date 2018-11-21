@@ -1,0 +1,28 @@
+# Ignore all dotfiles
+.*
+
+# Except...
+!.gitignore
+!.gitkeep
+!.gitattributes
+!.editorconfig
+!.npmrc
+!.npmignore
+!.eslint*
+!.babelrc
+!.stylintrc
+!.github/
+
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+
+# These files are compiled from htdocs/public/
+/public/d/
+
+# Node.js
+node_modules
+npm-debug.log
