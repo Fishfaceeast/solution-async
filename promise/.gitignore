@@ -1,0 +1,24 @@
+# Ignore all dotfiles
+.*
+
+# Except...
+!.gitignore
+!.gitkeep
+!.gitattributes
+!.editorconfig
+!.npmrc
+!.npmignore
+!.eslint*
+!.babelrc
+!.stylintrc
+!.github/
+
+/vendor
+/node_modules
+.env
+
+/bin/
+
+# Node.js
+node_modules
+npm-debug.log
