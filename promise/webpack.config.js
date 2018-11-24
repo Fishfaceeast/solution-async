@@ -1,6 +1,6 @@
 var config = {
 	entry: {
-		page1: "./src/entry.js"
+		page1: "./src/index.js"
 	},
 	output: {
 		path: __dirname + "/bin",

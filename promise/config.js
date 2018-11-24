@@ -1,4 +1,4 @@
 module.exports = {
-	dist: './bin',
+	dist: './build',
 }
 process.env.NODE_ENV = 'production';
