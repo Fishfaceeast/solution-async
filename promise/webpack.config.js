@@ -1,6 +1,9 @@
 var config = {
 	entry: {
-		page1: "./src/index.js"
+		basic: "./src/basic.js",
+		parallel: "./src/parallel.js",
+		serial: "./src/serial.js",
+		best: "./src/best.js"
 	},
 	output: {
 		path: __dirname + "/bin",
